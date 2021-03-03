@@ -1,13 +1,14 @@
-import {BrowserRouter as  Router } from "react-router-dom";
 import "./App.css";
-import Navbar from "./component/Navbar/Navbar";
+import Banner from "./components/Navbar/Banner/Banner";
+import Services from "./components/Services/Services";
 
 function App() {
   return (
-    <Router>
-      {/* <GlobalStyle></GlobalStyle> */}
-      <Navbar></Navbar>
-    </Router>
+    <div>
+      <Banner />
+      <Services/>
+
+    </div>
   );
 }
 
