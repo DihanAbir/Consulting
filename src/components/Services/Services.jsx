@@ -1,21 +1,42 @@
-import React from 'react';
-import SectionHeader from '../../utils/SectionHeader';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { service } from "../../Data/serviceData";
+import SectionHeader from "../../utils/SectionHeader";
+import "./css.css";
+import ServiceItem from "./ServiceItem";
 
 const Services = () => {
+const [limit, setLimit ] = useState(6);
 
-      const title={"backgroundColor" : "orange", "color": "white"}
-      const topic={"backgroundColor" : "salmon", "color": "white"}
+  const title = { backgroundColor: "orange", color: "white" };
+  const topic = { backgroundColor: "salmon", color: "white" };
 
-    return (
-        <div>
-            <SectionHeader  styleTitle= {title  }  styleTopic= {topic  }  topic= "Expert consulting" title="service demo"  />
+  const handleLimit = () => {
+    setLimit(limit+5)
+  }
 
-            <div className="row">
-                <div className="col-lg-3"></div>
-            </div>
 
-        </div>
-    );
-}
+  return (
+    <div className="container">
+      <SectionHeader
+        styleTitle={title}
+        styleTopic={topic}
+        topic="Expert consulting"
+        title="service demo"
+      />
+
+      <div className="row">
+        {service.slice(0,limit).map((serviceItem) => <ServiceItem serviceItem= {serviceItem} />  )}
+      </div>
+      {
+        limit > service.length  ? "": <div className=" text-center">
+        <Link to='/services'><button onClick={handleLimit} className='btn btn-light my-5'>More services</button></Link>
+         
+       </div>
+      }
+     
+    </div>
+  );
+};
 
 export default Services;

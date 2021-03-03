@@ -1,0 +1,16 @@
+img{
+    color: rebeccapurple;
+    padding: 10px;
+    transition: 0.4s ease-in-out;
+}
+img:hover{
+    background-color:rgb(235, 114, 114);
+    color: rebeccapurple;
+    padding: 3px;
+    border-radius: 30px;
+}
+
+
+.serviceRow{
+    height: 300px;
+}

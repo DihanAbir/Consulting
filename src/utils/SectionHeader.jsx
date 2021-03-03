@@ -1,6 +1,7 @@
 import React from "react";
 import "./css.css";
 
+
 const SectionHeader = ({ title, topic, styleTopic = "", styleTitle = "" }) => {
   return (
     <div className="container">
@@ -12,6 +13,8 @@ const SectionHeader = ({ title, topic, styleTopic = "", styleTitle = "" }) => {
               </p>
 
           <h4 style={styleTitle}> {title}</h4>
+          <i className="bi bi-app-indicator"></i>
+
         </div>
       </div>
     </div>
