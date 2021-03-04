@@ -4,12 +4,12 @@ import { service } from "../../Data/serviceData";
 import SectionHeader from "../../utils/SectionHeader";
 import "./css.css";
 import ServiceItem from "./ServiceItem";
+import {title,topic} from "../../utils/Widgets";
 
 const Services = () => {
 const [limit, setLimit ] = useState(6);
 
-  const title = { backgroundColor: "orange", color: "white" };
-  const topic = { backgroundColor: "salmon", color: "white" };
+
 
   const handleLimit = () => {
     setLimit(limit+5)

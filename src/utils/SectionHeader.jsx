@@ -2,11 +2,13 @@ import React from "react";
 import "./css.css";
 
 
-const SectionHeader = ({ title, topic, styleTopic = "", styleTitle = "" }) => {
+const SectionHeader = ({ title, topic, col = 4 ,styleTopic = "", styleTitle = "" }) => {
+
+  
   return (
     <div className="container">
       <div className=" row text-center justify-content-lg-center">
-        <div className="col-lg-4 border">
+        <div className="col-lg-${col} border">
 
               <p style={styleTopic} className="topic">
                 {topic}

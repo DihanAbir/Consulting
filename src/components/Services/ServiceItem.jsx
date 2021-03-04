@@ -11,7 +11,7 @@ const ServiceItem = ({ serviceItem }) => {
       <div className="p-3 border serviceRow">
         <div className="row">
           <div className="col-lg-5">
-            <img className="img-fluid" src={serviceItem.icon} alt="" />
+            <img className="img img-fluid" src={serviceItem.icon} alt="" />
           </div>
           <div className="col-lg-7">
             <h6> {serviceItem.title}</h6>
