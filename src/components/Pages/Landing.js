@@ -9,8 +9,8 @@ function Landing(props) {
     <div>
       <Banner />
       <Services />
-      <Works/>
-      <Review/>
+      <Works />
+      <Review />
     </div>
   );
 }

@@ -1,14 +1,27 @@
 import React from "react";
+import Menu from "../../utils/Menu";
 import UpperNav from "./UpperNav";
 
 const Navbar = () => {
   return (
     <div className="container ">
-      <UpperNav/>
+      <UpperNav />
       <div className="row my-4">
-        <div className="col-lg-3 border "> demo files </div>
-        <div className="col-lg-7 border"> demo files </div>
-        <div className="col-lg-2 border"> demo files </div>
+        <div className="col-lg-3  ">
+          <span
+            className="primary-c"
+            style={{ fontSize: "35px", fontWeight: "bolder" }}
+          >
+            M
+          </span>
+          <b className="text-white">uradConsulting</b>
+        </div>
+        <div className="col-lg-7 ">
+          <Menu />
+        </div>
+        <div className="col-lg-2">
+          <button className="primary-btn">Get Quote</button>
+        </div>
       </div>
     </div>
   );

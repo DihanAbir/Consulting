@@ -1,0 +1,64 @@
+.Link{
+    color: white;
+    text-transform: none;
+}
+.Link:hover{
+    color: #FE6294;
+}
+.primary-c{
+    color: #FE6294;
+}
+.primary-btn{
+    background-color: #FE6294;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+.primary-btn:hover{
+    background-color:  #9198e5;
+}
+.primary-btn:focus{
+   outline: none;
+}
+ul{
+    display: flex;
+}
+ul li{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    list-style: none;
+    padding: 15px;
+    transition: 0.4s ease-in-out;
+}
+ul li:hover{
+    color: #FE6294;
+}
+
+.imgIfram{
+    position: relative;
+    /* animation: mymove 4s infinite; */
+    animation-duration: 2s;
+animation-name: mymove;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+
+@keyframes mymove {
+    /* from {
+        transform: scale(.95);
+    }
+    to {
+        transform: scale(1);
+    } */
+
+
+    from   {top: 0px;}
+    to {top: 20px;}
+    
+  }
