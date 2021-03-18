@@ -1,38 +1,27 @@
 import React, { useState } from "react";
-import Lottie from 'react-lottie';
+import Lottie from "react-lottie";
 import Modal from "react-bootstrap/Modal";
-import animationData from '../assets//37147-contact-us.json';
+import animationData from "../assets//37147-contact-us.json";
 import _ from "lodash/fp";
 import { useForm } from "react-hook-form";
 
-
-
-
-
-
 const CustomForm = () => {
-  
-  const { register, handleSubmit,  errors } = useForm();
+  const { register, handleSubmit, errors } = useForm();
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const onSubmit = (data) => {  }; 
-
+  const onSubmit = (data) => {};
 
   const defaultOptions = {
     loop: true,
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
-
-
-
-
 
   return (
     <div>
@@ -65,26 +54,22 @@ const CustomForm = () => {
         {errors.age && (
           <p>You Must be older then 18 and younger then 99 years old</p>
         )}
-        <input   variant="primary" onClick={handleShow} type="submit" />
+        <input
+          style={{ color: "white", fontWeight: "600" }}
+          variant="primary"
+          onClick={handleShow}
+          type="submit"
+        />
       </form>
 
-
-
       <Modal show={show} onHide={handleClose}>
-
         <Modal.Body>
-        <Lottie 
-	    options={defaultOptions}
-        height={400}
-        width={400}
-      />
+          <Lottie options={defaultOptions} height={400} width={400} />
         </Modal.Body>
-
       </Modal>
 
-
       {/* modal  end */}
-</div>
+    </div>
   );
 };
 

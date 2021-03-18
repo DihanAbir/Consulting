@@ -16,7 +16,7 @@ form {
     box-sizing: border-box;
     width: 100%;
     border-radius: 4px;
-    border: 1px solid rgb(236, 28, 28);
+    border: 1px solid rgb(202, 202, 212);
     padding: 10px 15px;
     margin-bottom: 10px;
     font-size: 14px;
@@ -27,9 +27,9 @@ form {
     display: block;
     margin-bottom: 13px;
     margin-top: 20px;
-    color: rgb(0, 0, 0);
+    color: rgb(36, 36, 77);
     font-size: 14px;
-    font-weight: 200;
+    font-weight: 600;
   }
 
   button[type="submit"],
@@ -76,7 +76,7 @@ form {
     width: 99%;
     overflow: auto;
     resize: vertical;
-    border: 1px solid red;
+    border: 1px solid rgb(36, 36, 77);
 }
 
 
@@ -141,7 +141,6 @@ form {
 	opacity: 1;
 }
 [type=button]:not(:disabled) {
-
   background-color: rgb(247, 123, 123);
 }
 .guuruq {
@@ -149,11 +148,50 @@ form {
 }
 .cJeRRR {
   padding: -33px;
-
   background-color: rgba(255, 255, 255, 0.5)!important;
-
   height: 20px!important;
   width: 20px!important;
   box-shadow: 0 0 12px 3px rgb(234 234 234)!important;
+}
 
+
+/* overlay */
+.s-container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  border-radius: 10px;
+}
+
+.s-container:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }

@@ -7,25 +7,28 @@ const ServiceItem = ({ serviceItem }) => {
     console.log(id);
   };
   return (
-    <div className="col-lg-4 p-3">
+    <div className="serviceItem col-lg-4 p-3">
       <div className="p-3 border serviceRow">
         <div className="row">
           <div className="col-lg-5">
-            <img className="img img-fluid" src={serviceItem.icon} alt="" />
+            <img className=" img img-fluid" src={serviceItem.icon} alt="" />
           </div>
           <div className="col-lg-7">
-            <h6> {serviceItem.title}</h6>
+            <h5> {serviceItem.title}</h5>
           </div>
         </div>
         <p> {serviceItem.description}</p>
-        <Link to={"/singleServices/"+ serviceItem.id}>
-          <button
-            className="btn btn-light"
-            // onClick={}
-          >
-            Read More...
-          </button>
-        </Link>
+        <br />
+        <div className="text-center">
+          <Link className="Link" to={"/singleServices/" + serviceItem.id}>
+            <button
+              className="my-1 btn btn-light"
+              // onClick={}
+            >
+              Read More...
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

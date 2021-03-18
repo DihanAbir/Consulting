@@ -11,19 +11,19 @@ function Review() {
   return (
     <div className="container-fluid reviewContainer">
       <div className="container p-4">
-      <SectionHeader
-        styleTitle={title}
-        styleTopic={topic}
-        topic="Case Study"
-        title="Our Recent Work"
-      />
-      <div>
-        <Carousel itemsToShow={2} enableAutoPlay={true} autoPlaySpeed={3000}>
-          {WorkData.map((filtereditems) => (
-            <ReviewSlider filtereditems={filtereditems} />
-          ))}
-        </Carousel>
-      </div>
+        <SectionHeader
+          styleTitle={title}
+          styleTopic={topic}
+          topic="Case Study"
+          title="Our Recent Work"
+        />
+        <div>
+          <Carousel itemsToShow={2} enableAutoPlay={true} autoPlaySpeed={3000}>
+            {WorkData.map((filtereditems) => (
+              <ReviewSlider filtereditems={filtereditems} />
+            ))}
+          </Carousel>
+        </div>
       </div>
     </div>
   );

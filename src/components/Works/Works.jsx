@@ -33,7 +33,11 @@ const Works = () => {
 
       <div className="flex text-center my-4">
         {buttons.map((button) => (
-          <button className="btn btn-light" onClick={() => setFilter(button)}>
+          <button
+            style={{ fontWeight: "bolder " }}
+            className="btn btn-light border mx-2 Link:hover"
+            onClick={() => setFilter(button)}
+          >
             {button}
           </button>
         ))}
@@ -47,11 +51,14 @@ const Works = () => {
         </Carousel>
       </div>
 
-        <div className="row py-5 my-5">
-        <div className="col-lg-6"><FrequentlyAsk/></div>
-        <div className="col-lg-6"><FAQ/></div>
+      <div className="row py-5 my-5">
+        <div className="col-lg-6">
+          <FrequentlyAsk />
         </div>
-
+        <div className="col-lg-6">
+          <FAQ />
+        </div>
+      </div>
     </div>
   );
 };
